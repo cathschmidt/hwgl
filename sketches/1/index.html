@@ -1,0 +1,178 @@
+<html>
+<head>
+
+	<style>
+
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	body {
+		font-family: "Cotham Sans", Helvetica, sans serif;
+		color: black;
+		overflow-x:hidden;
+	}
+
+	h1 {
+		text-align: center;
+		font-size: 30px;
+	}
+
+	img {
+		max-width: 800px;
+		height: auto;
+	}
+
+	header {
+		width: 100%;
+	    position: fixed;
+	    top: 50px;
+	    text-align: center;
+	    clear: both;
+	}
+
+	div.container {
+		clear: both;
+		margin-top: 100px;
+	}
+
+	section {
+		float: left;
+		width: 49%;
+		z-index: 100;
+	} section article {
+		padding: 20px;
+		width: 50%;
+		margin: auto;
+		transition: all 1s;
+
+		} section article img{
+			width: 100%;
+			height: auto;
+			display: block;
+		} section article:nth-child(2n){
+			margin-top: -10px;
+			margin-left: 30px;
+			width: 50%;
+		} section article:nth-child(3n){
+			margin-top: 50px;
+			margin-right: -20px;
+			width: 40%;
+		} section article:hover{
+			width: 70%;
+			height:auto;
+			transition: all 1s;
+			z-index: 1000;
+			cursor: pointer;
+		}
+
+	article p {
+		display: inline-block;
+		margin: auto;
+		clear: both;
+		text-align: center;
+		padding-top: 10px;
+		font-size: 15px;
+	}
+
+
+	div#overlays {
+		display: none;
+		position: absolute;
+		z-index: 100;
+	} div#overlays img {
+		padding: 400px;
+		padding-top:800px;
+	} div#overlays img:nth-child(2n){
+		padding-top: 300px;
+		padding-left: 1000px;
+	} div#overlays img:nth-child(3n+1){
+		padding-top: 150px;
+		padding-left: 10px;
+	}
+
+	</style>
+</head>
+<body>
+
+<header>
+	<h1>h4rD w0rk1n6 600D 700k1n6</h1>
+	<h2>info</h2>
+</header>
+
+<div class="container">
+
+<section id="one">
+
+	<article>
+		<img src="img/1.jpg">
+		<p>Filipino Folk Foundry</p>
+	</article>
+
+	<article>
+		<img src="img/3.jpg">
+		<p>Filipino Folk Foundry</p>
+	</article>
+
+	<article>
+		<img src="img/5.jpg">
+		<p>Filipino Folk Foundry</p>
+	</article>
+
+	<article>
+		<img src="img/7.jpg">
+		<p>Filipino Folk Foundry</p>
+	</article>
+
+	<article>
+		<img src="img/9.jpg">
+		<p>Filipino Folk Foundry</p>
+	</article>
+
+</section>
+
+<section id="two">
+
+	<article>
+		<img src="img/2.jpg">
+		<p>Filipino Folk Foundry</p>
+	</article>
+
+	<article>
+		<img src="img/4.jpg">
+		<p>Filipino Folk Foundry</p>
+	</article>
+
+	<article>
+		<img src="img/6.jpg">
+		<p>Filipino Folk Foundry</p>
+	</article>
+
+	<article>
+		<img src="img/8.jpg">
+		<p>Filipino Folk Foundry</p>
+	</article>
+
+
+</section>
+
+</div>
+
+<div id="overlays">
+
+		<img src="img/png/1.png">
+
+		<img src="img/gif/1.gif">
+
+		<img src="img/gif/2.gif">
+
+		<img src="img/gif/3.gif">
+
+		<img src="img/gif/4.gif">
+
+
+</div>
+
+</body>
+</html>
