@@ -48,11 +48,8 @@
 		width: 80%;
 		margin: auto;
 		margin-top: 3vw;
-		transition: box-shadow 1s;
-		transition: all 1s;
 
 		} section article img{
-			transition:box-shadow 1s;
 			display: block;
 			max-height: 90vh;
 
@@ -156,31 +153,25 @@
 
 			//
 
-	    	$("article").click(function(){
-
-	    		$(this).toggleClass();
-
-	    	});
-
-	    /*	//"paralax" scrolling
+	    	//"paralax" scrolling
 
 	    	$(document).scroll(function() {
 
 	    	var scroll = $(document).scrollTop();
 	    	console.log(scroll);
-	    	var scrollone = -(scroll*.2);
-	    	var scrolltwo = (scroll*.3);
+	    	var scrollone = -(scroll*.19);
+	    	var scrolltwo = (scroll*.12);
 
 	        $("section article:nth-child(2n)").css({
 	        	"margin-top": scrollone + "px" 
 	        	//"border": "10px solid yellow"
 	        });
 
-	        $("section article:nth-child(3n)").css({
+	        $("section article:nth-child(5n)").css({
 	        	"margin-top": scrolltwo + "px" 
 	        	//"border": "10px solid yellow"
 	        });
-	    }); */
+	    });
 
 	    });
 
