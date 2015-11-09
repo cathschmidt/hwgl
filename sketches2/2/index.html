@@ -28,7 +28,7 @@
 		font-family: "Career", serif;
 		color: black;
 		overflow-x:hidden;
-		background-color: yellow;
+		background-color: blue;
 	}
 
 	h1 {
@@ -36,7 +36,7 @@
 		font-weight:normal;
 		font-size: 6vw;
 		font-family: "Terminal", sans serif;
-		color: aqua;
+		color: yellow;
 	}
 
 	img {
@@ -47,7 +47,7 @@
 	em {
 		font-style: normal;
 		padding-bottom: 3px;
-		border-bottom: 2px solid black;
+		border-bottom: 2px solid white;
 	}
 
 	header {
@@ -58,6 +58,7 @@
 	    clear: both;
 	}
 	a.info {
+		color: white;
 		display: block;
 		font-family: "CMU", serif;
 		position: fixed;
@@ -72,7 +73,8 @@
 		cursor: pointer;
 		font-weight: bold;
 		margin-bottom: 20px;
-		box-shadow: 3px 3px 3px aqua;
+		background-color: blue;
+		box-shadow: 3px 3px 3px white;
 	}
 
 	#ocd {
@@ -123,16 +125,15 @@
 		display: none;
 		position: fixed;
 		top: 1vw;
+		text-align: right;
+		left: 18vw;
+		color: white;
 		max-width: 80vw;
 		/* border: 20px ridge blue; */
 		padding: 20px;
-		left: 1vw;
 		z-index: 10000001;
 		font-size: 6vh;
 		line-height: 130%;
-		/* background-color: rgba(255,255,255,.8); */
-		background-color:  rgba(255,255,0,.8);
-		box-shadow: 10px 10px 40px aqua;
 	}
 
 
@@ -151,6 +152,10 @@
 		padding-left: 10px;
 	}
 
+	.shady {
+		opacity:.5;
+	}
+
 	</style>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -163,7 +168,13 @@
 
 	    	$("article").hover(function() {
 
-	    		$(this).children("p").fadeToggle(400);
+	    		var dis = $(this);
+
+	    		$("article img").toggleClass("shady").promise().done(function(){
+	    			dis.children("p").fadeToggle(400);
+	    		});
+	    		
+	    		
 	    		//$(this).children("p").css("visibility", "visible");
 
 	    	});
@@ -173,7 +184,6 @@
 	    	$(document).scroll(function() {
 
 	    	var scroll = $(document).scrollTop();
-	    	console.log(scroll);
 	    	var scrollone = -(scroll*.4);
 	    	var scrolltwo = (scroll*.5);
 	    	var one = (scroll*.1);
