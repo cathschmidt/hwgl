@@ -1,0 +1,285 @@
+<html>
+<head>
+
+	<style>
+
+	@font-face {
+		font-family: 'Career';
+		font-style: normal;
+		src: url('Career.ttf');
+	}
+		@font-face {
+		font-family: 'CMU';
+		font-style: normal;
+		src: url('cmunvi.ttf');
+	}
+		@font-face {
+		font-family: 'Terminal';
+		font-style: normal;
+		src: url('terminal.otf');
+	}
+
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	body {
+		font-family: "Career", serif;
+		color: black;
+		overflow-x:hidden;
+		background-color: yellow;
+	}
+
+	h1 {
+		text-align: center;
+		font-weight:normal;
+		font-size: 6vw;
+		font-family: "Terminal", sans serif;
+		color: aqua;
+	}
+
+	img {
+		max-width: 800px;
+		height: auto;
+	}
+
+	em {
+		font-style: normal;
+		padding-bottom: 3px;
+		border-bottom: 2px solid black;
+	}
+
+	header {
+		width: 100%;
+	    position: fixed;
+	    top: 40vh;
+	    text-align: center;
+	    clear: both;
+	}
+	a.info {
+		display: block;
+		font-family: "CMU", serif;
+		position: fixed;
+		bottom: 1vh;
+		left: 1vh;
+		font-style: italic;
+		padding: 30px;
+		z-index: 100001;
+		transition: all 1s;
+	} a.info:hover {
+		transition: all 1s;
+		cursor: pointer;
+		font-weight: bold;
+		margin-bottom: 20px;
+		box-shadow: 3px 3px 3px aqua;
+	}
+
+	#ocd {
+		left: 18vh;
+	}
+
+	div.container {
+		clear: both;
+	}
+
+	section {
+		float: left;
+		width: 49%;
+		z-index: 100;
+	} section article {
+		padding: 20px;
+		position: relative;
+		width: 50%;
+		margin: auto;
+		transition: box-shadow 1s;
+
+		} section article img{
+			display: block;
+			width: 100%;
+			transition:box-shadow 1s, transform 1s;
+			height: auto;
+			display: block;
+		} section article:nth-child(2n){
+			margin-top: -10px;
+			margin-left: 30px;
+			width: 50%;
+		} section article:nth-child(3n){
+			margin-top: 50px;
+			margin-right: -20px;
+			width: 40%;
+		} section article img:hover{
+			/* width: 70%; */
+			transition:transform 1s, box-shadow 1s;
+			box-shadow: 10px 10px 40px aqua;
+			transform: scale(1.2);
+			z-index: 1000;
+			cursor: pointer;
+		} section article:hover {
+			cursor: pointer;
+		}
+
+	article p {
+		display: none;
+		position: fixed;
+		top: 1vw;
+		width: 80vw;
+		/* border: 20px ridge blue; */
+		padding: 20px;
+		left: 1vw;
+		z-index: 10000001;
+		font-size: 6vh;
+		line-height: 130%;
+		/* background-color: rgba(255,255,255,.8); */
+		background-color:  rgba(255,255,0,.8);
+		box-shadow: 10px 10px 40px aqua;
+	}
+
+
+	div#overlays {
+		display: none;
+		position: absolute;
+		z-index: 100;
+	} div#overlays img {
+		padding: 400px;
+		padding-top:800px;
+	} div#overlays img:nth-child(2n){
+		padding-top: 300px;
+		padding-left: 1000px;
+	} div#overlays img:nth-child(3n+1){
+		padding-top: 150px;
+		padding-left: 10px;
+	}
+
+	</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+	<script type="text/javascript">
+	    $(document).ready(function () {
+
+
+	    	//captions
+
+	    	$("article").hover(function() {
+
+	    		$(this).children("p").fadeToggle(400);
+	    		//$(this).children("p").css("visibility", "visible");
+
+	    	});
+
+	    	//"paralax" scrolling
+
+	    	$(document).scroll(function() {
+
+	    	var scroll = $(document).scrollTop();
+	    	console.log(scroll);
+	    	var scrollone = -(scroll*.4);
+	    	var scrolltwo = (scroll*.5);
+	    	var one = (scroll*.1);
+
+	        $("section article:nth-child(2n)").css({
+	        	"margin-top": scrollone + "px" 
+	        	//"border": "10px solid yellow"
+	        });
+
+	        $("section article:nth-child(3n)").css({
+	        	"margin-top": scrolltwo + "px" 
+	        	//"border": "10px solid yellow"
+	        });
+
+	        $("header h1").css({
+	        	"transform": "skew(" + scrollone + "deg," + one + "deg)" 
+	        	//"border": "10px solid yellow"
+	        });
+	    });
+
+	    });
+    </script>
+
+</head>
+<body>
+
+	<header>
+	<h1>h4rDw0rk1n6600D700k1n6</h1>
+</header>
+
+<a class="info">contact</a>
+<a id="ocd" class="info">office of culture and design</a>
+
+<div class="container">
+
+<section id="one">
+
+	<article>
+		<img src="img/1.jpg">
+		<p><em>In Darkness:</em> graffiti-covered townhouse entrance plastered with haphazard buzzers, behind which is a series of courtyards and a boxy building.</p>
+	</article>
+
+	<article>
+		<img src="img/3.jpg">
+		<p>He wanders across the road, stopping to speak gently with a passing friend, and greets me at the door, bleary eyed from a flight from Moscow the previous night.</p>
+	</article>
+
+	<article>
+		<img src="img/5.jpg">
+		<p>A few storeys up, Becker opens the door to his unit. It is a sizeable, airy room, treated with acoustic panelling, that looks like the midway point between a squatted office building and an electronics workshop. We sit on sofas in the corner, Becker dressed in the uniform in which he can be found in virtually every photograph of him: chore jacket; peaked hat; rollup.</p>
+	</article>
+
+	<article>
+		<img src="img/7.jpg">
+		<p>His favoured outfit is a neat metaphor for his demeanour: simultaneously workmanlike and scholarly; at once the proletarian and the intellectual. Becker sits with his back to the bulk of his equipment, set out in a ring of patch leads and unknowable black boxes in the centre of the room.</p>
+	</article>
+
+	<article>
+		<img src="img/9.jpg">
+		<p>Nada</p>
+	</article>
+
+</section>
+
+<section id="two">
+
+	<article>
+		<img src="img/2.jpg">
+		<p>Tatlo Book Party</p>
+	</article>
+
+	<article>
+		<img src="img/4.jpg">
+		<p>Filler</p>
+	</article>
+
+	<article>
+		<img src="img/6.jpg">
+		<p>A new thing</p>
+	</article>
+
+	<article>
+		<img src="img/8.jpg">
+		<p>Zilch</p>
+	</article>
+
+
+</section>
+
+</div>
+
+
+<div id="overlays">
+
+		<img src="img/png/1.png">
+
+		<img src="img/gif/1.gif">
+
+		<img src="img/gif/2.gif">
+
+		<img src="img/gif/3.gif">
+
+		<img src="img/gif/4.gif">
+
+
+</div>
+
+</body>
+</html>
